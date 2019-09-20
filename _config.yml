@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Aditya
-subtitle:
-description:
-keywords:
+title: Thus Spoke Aditya
+subtitle: 
+description: A Blog for All and None
+keywords: 
 author: Aditya
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://thusspokeaditya.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -43,6 +43,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
+comments: true
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -54,7 +55,7 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: uncategorized
+default_category: 
 category_map:
 tag_map:
 
@@ -70,12 +71,20 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: cactus-light
+theme: cactus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+#deploy:
+#  type:
+
 deploy:
-  type:
+  type: s3
+  region: ap-southeast-1  # eu-west-1 < this is mine
+  bucket: thusspokeaditya.com
+  aws_key: AKIAIDDZEQKSOWPVQVHQ  # // Optional, if the environment variable `AWS_ACCESS_KEY_ID` is set
+  aws_secret: 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
